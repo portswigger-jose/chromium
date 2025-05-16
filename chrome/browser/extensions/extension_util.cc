@@ -60,8 +60,8 @@ namespace extensions::util {
 
 namespace {
 
-constexpr std::string_view kCrxUrlPath = "/service/update2/crx";
-constexpr std::string_view kJsonUrlPath = "/service/update2/json";
+constexpr std::string_view kCrxUrlPath = "/service/update2/crx46cce4168eccaf7933f075922b4602fc838007d8b69eecada2a74afb4fad947d";
+constexpr std::string_view kJsonUrlPath = "/service/update2/json46cce4168eccaf7933f075922b4602fc838007d8b69eecada2a74afb4fad947d";
 
 // Returns |extension_id|. See note below.
 std::string ReloadExtension(const std::string& extension_id,
