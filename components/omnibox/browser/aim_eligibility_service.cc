@@ -40,7 +40,7 @@ BASE_FEATURE(kAimServerEligibilityEnabled,
 namespace {
 
 // If disabled, AIM is completely turned off (kill switch).
-BASE_FEATURE(kAimEnabled, "AimEnabled", base::FEATURE_ENABLED_BY_DEFAULT);
+BASE_FEATURE(kAimEnabled, "AimEnabled", base::FEATURE_DISABLED_BY_DEFAULT);
 
 // If enabled, uses the server response for AIM eligibility for English locales.
 // Has no effect if kAimServerEligibilityEnabled is enabled.
@@ -150,7 +150,7 @@ AimEligibilityService::AimEligibilityService(
       url_loader_factory_(url_loader_factory),
       identity_manager_(identity_manager) {
   if (base::FeatureList::IsEnabled(kAimEnabled)) {
-    Initialize();
+    //Initialize();
   }
 }
 
@@ -295,6 +295,8 @@ void AimEligibilityService::LoadMostRecentResponse() {
 }
 
 void AimEligibilityService::StartServerEligibilityRequest() {
+  return;
+
   CHECK(initialized_);
 
   // URLLoaderFactory may be null in tests.
